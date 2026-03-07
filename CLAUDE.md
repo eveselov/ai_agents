@@ -24,7 +24,8 @@ ai-agents/
 ├── CLAUDE.md
 ├── README.md
 ├── requirements.txt
-├── .env.example
+├── .env.example - a template
+├── .env - a real secret keys - never submit to git
 ├── shared/
 │   └── utils.py
 ├── lecture1_minimal_loop/

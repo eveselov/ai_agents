@@ -25,8 +25,7 @@ Each lecture answers one layer of that question through running notebook code.
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-cp .env.example .env
-# Fill in your API keys in .env
+# Fill in your API keys in .env - use .env.example as a template
 ```
 
 ## Recurring Theme
