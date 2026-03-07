@@ -1,29 +1,36 @@
-# README #
+# AI Agents Course
 
-This README would normally document whatever steps are necessary to get your application up and running.
+A 4-lecture hands-on course on how AI agents are built — not how to use them.
 
-### What is this repository for? ###
+Designed for a math-enthusiast audience: engineers and curious non-technical people.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Central Question
 
-### How do I get set up? ###
+> *What does it take to get an LLM to reliably accomplish a goal in the real world?*
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Each lecture answers one layer of that question through running notebook code.
 
-### Contribution guidelines ###
+## Lectures
 
-* Writing tests
-* Code review
-* Other guidelines
+| # | Topic | Key Concept |
+|---|-------|-------------|
+| 1 | [Minimal Agent Loop](lecture1_minimal_loop/) | Tool calling, Observe→Think→Act |
+| 2 | [Memory and RAG](lecture2_memory_rag/) | Context window, vector search, retrieval |
+| 3 | [Graphs and Planning](lecture3_graphs_planning/) | LangGraph, ReAct pattern |
+| 4 | [Multi-Agent Systems](lecture4_multi_agent/) | Orchestrator/worker, language as API |
 
-### Who do I talk to? ###
+## Setup
 
-* Repo owner or admin
-* Other community or team contact
+```bash
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env
+# Fill in your API keys in .env
+```
+
+## Recurring Theme
+
+In classical software, component interfaces are enforced by type systems and compilers.
+In agent systems, the interface between components is **natural language** — strings flowing between nodes.
+This is the fundamental architectural novelty of agents.
