@@ -14,14 +14,17 @@ What is the minimum structure that turns an LLM call into an agent?
 
 ## Key Concepts
 
-- LLM API call anatomy
-- Tool/function calling (JSON schema)
+- LLM API call anatomy, completion token cost, list of user/system messages
+- Tool/function calling (JSON schema) - called by LLM automatically or inferred from LLM structured repsonse
 - The agent loop (ReAct conceptually)
 - Language as interface (first appearance)
 
 ## Notebook
 
-`notebook.ipynb` — ~50-80 lines, raw OpenAI API only, no frameworks.
+`notebook.ipynb` — raw OpenAI API only, no frameworks.
+Presents a list of cells demonstrating individual actions such as connection, API request, configuration for tools,
+illustrations for results investigations and interpretations.
+Total speaking time ~2 hours.
 
 ## Discussion Prompts
 

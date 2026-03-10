@@ -4,7 +4,7 @@ This file gives Claude context across multiple short threads. Update it as the c
 
 ## Project Overview
 
-A 4-lecture course on AI agents for a math-enthusiast friends club (~50 people). Mix of engineers and smart non-technical people. Goal: constructive understanding of how agents are built, not how to use them.
+A 4-lecture course on AI agents for a math-enthusiast friends club (~50 people). Mix of engineers and smart non-technical people. Goal: constructive understanding of how agents are built, not how to use them. Each lecture duration is 2 hours. 
 
 Working directory: `c:/git/ai-agents/`
 
@@ -59,15 +59,18 @@ ai-agents/
 - Tavily API (key in .env)
 - LangChain, LangGraph
 - Chroma (vector store)
+- SQLite (graph state persistence)
 - Anthropic API (to be added)
 
 ## Design Decisions
 
-- One notebook per lecture
+- One notebook per 2-hour lecture
 - `shared/utils.py` for shared boilerplate (API client init, display helpers)
 - Each lecture README has instructor notes and class discussion prompts
 - Lecture 2 has a `docs/` folder for RAG corpus — corpus not yet chosen
 - Notebooks must be self-contained and runnable start-to-finish
+- In python code use explicit type specifications for all variables, parameters, return values
+- In bigger Python cells use short comments before each logical to explain its intention
 
 ## Open Questions
 
@@ -81,7 +84,7 @@ ai-agents/
 
 ### Lecture 1
 - Bare OpenAI call → add tool → close the loop
-- Notebook: ~50-80 lines, raw OpenAI API only, no frameworks
+- Notebook: raw OpenAI API only, no frameworks
 - Key moment: point at the JSON tool-call string and say "this is the interface"
 
 ### Lecture 2
