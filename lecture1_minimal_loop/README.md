@@ -11,6 +11,7 @@ What is the minimum structure that turns an LLM call into an agent?
 3. Add a tool. Show the JSON tool-calling contract. Point at the screen: *this string is the interface.*
 4. Close the loop: model decides to call a tool → tool runs → result returns as text → model continues.
 5. Name it: Observe → Think → Act. This is an agent. Everything else is elaboration.
+6. Show the higher-level alternative: a `@tool` decorator that auto-generates JSON schemas from type hints and docstrings. Same loop, same API calls — pure developer-experience sugar. This is what LangChain and other frameworks do internally.
 
 ## Key Concepts
 
@@ -21,7 +22,7 @@ What is the minimum structure that turns an LLM call into an agent?
 
 ## Notebook
 
-`notebook.ipynb` — raw OpenAI API only, no frameworks.
+`notebook1.ipynb` — raw OpenAI API only, no frameworks.
 Presents a list of cells demonstrating individual actions such as connection, API request, configuration for tools,
 illustrations for results investigations and interpretations.
 Total speaking time ~2 hours.

@@ -30,24 +30,24 @@ ai-agents/
 │   └── utils.py
 ├── lecture1_minimal_loop/
 │   ├── README.md
-│   └── notebook.ipynb
+│   └── notebook1.ipynb
 ├── lecture2_memory_rag/
 │   ├── README.md
-│   ├── notebook.ipynb
+│   ├── notebook2.ipynb
 │   └── docs/
 ├── lecture3_graphs_planning/
 │   ├── README.md
-│   └── notebook.ipynb
+│   └── notebook3.ipynb
 └── lecture4_multi_agent/
     ├── README.md
-    └── notebook.ipynb
+    └── notebook4.ipynb
 ```
 
 ## Lecture Status
 
 | Lecture | Topic | Status |
 |---------|-------|--------|
-| 1 | Minimal agent loop (raw OpenAI, no frameworks) | scaffolded |
+| 1 | Minimal agent loop (raw OpenAI, no frameworks) | finished |
 | 2 | Memory and RAG (Chroma) | scaffolded |
 | 3 | Graphs and planning (LangGraph + Tavily) | scaffolded |
 | 4 | Multi-agent systems (LangGraph orchestrator/worker) | scaffolded |
@@ -60,7 +60,6 @@ ai-agents/
 - LangChain, LangGraph
 - Chroma (vector store)
 - SQLite (graph state persistence)
-- Anthropic API (to be added)
 
 ## Design Decisions
 

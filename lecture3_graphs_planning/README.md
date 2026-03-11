@@ -21,7 +21,7 @@ How do you build something more complex than a single loop? How do you give an a
 
 ## Notebook
 
-`notebook.ipynb` — LangGraph workflow: Tavily search → summarize with OpenAI.
+`notebook3.ipynb` — LangGraph workflow: Tavily search → summarize with OpenAI.
 
 ## Discussion Prompts
 

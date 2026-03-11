@@ -21,7 +21,7 @@ When does one agent become multiple agents, and why?
 
 ## Notebook
 
-`notebook.ipynb` — Two-agent LangGraph system. Orchestrator generates tasks, worker executes, results flow back.
+`notebook4.ipynb` — Two-agent LangGraph system. Orchestrator generates tasks, worker executes, results flow back.
 
 ## Discussion Prompts
 

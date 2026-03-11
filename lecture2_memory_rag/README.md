@@ -21,7 +21,7 @@ What happens when the task takes more than one step? What needs to be remembered
 
 ## Notebook
 
-`notebook.ipynb` — Chroma + OpenAI. Show retrieval, prompt construction, answer. Then break it.
+`notebook2.ipynb` — Chroma + OpenAI. Show retrieval, prompt construction, answer. Then break it.
 
 ## Corpus
 
