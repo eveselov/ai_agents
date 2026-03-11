@@ -5,7 +5,7 @@ Import with: import sys; sys.path.insert(0, '..'); from shared.utils import *
 
 import os
 import json
-from typing import List
+from typing import Sequence
 from dotenv import load_dotenv
 from openai import OpenAI
 from openai.types.chat import ChatCompletion, ChatCompletionMessage, ChatCompletionMessageParam, ChatCompletionMessageToolCallUnion
@@ -23,17 +23,19 @@ def print_tool_call(tool_call: ChatCompletionMessageToolCallUnion):
     print(f"  Function tool: {tool_call.function.name} Args: {json.dumps(args, indent=4)}")
 
 
-def print_messages(messages: List[ChatCompletionMessage | ChatCompletionMessageParam]):
-    print("Full conversation (what the model 'sees' on each call):")
-    print()
+def print_messages(title: str, messages: Sequence[ChatCompletionMessage | ChatCompletionMessageParam]):
+    """Helper for printing a list of messages"""
+    print(title)
     for i, m in enumerate(messages):
         role = m["role"].upper()
         if m["content"] is not None:
             content = m["content"]
         elif m["tool_calls"] is not None:
-            tool_call: ChatCompletionMessageToolCallUnion = m["tool_call"]
-            args = json.loads(tool_call.function.arguments)
-            content = f"Function tool: {tool_call.function.name} Args: {json.dumps(args, indent=4)}"
+            tool_calls: ChatCompletionMessageToolCallUnion = m["tool_calls"]
+            content = "TOOL calls:"
+            for tool_call in tool_calls:
+                function = tool_call.function
+                content += f" {function.name} Args: {json.dumps(json.loads(function.arguments), indent=4)}"
         else:
             content = "Unexpected"
         content = str(content)
