@@ -71,6 +71,21 @@ ai-agents/
 - In python code use explicit type specifications for all variables, parameters, return values
 - In bigger Python cells use short comments before each logical to explain its intention
 
+## Notebook Cell Structure
+
+Each notebook follows a two-layer narrative pattern:
+
+**Visible layer** (always shown): a short markdown cell before each code cell that states what the code does — one or two sentences, readable from across the room. This is what listeners see on the screen during live execution.
+
+**Details layer** (instructor-controlled): a `<details>` / `<summary>` block in a markdown cell *after* the code cell. Contains deeper reflection: internals, design rationale, failure modes, connections to broader concepts. The instructor opens these selectively depending on time available and audience engagement.
+
+Rules for `<details>` blocks:
+- Title in `<summary>` should name the concept, not the code action (e.g. "What is a tool?" not "Tool schema defined")
+- Content should deepen, not repeat — assume the listener just saw the code run
+- Each block should be independently openable; avoid cross-references between blocks
+- Prefer concrete examples and failure modes over abstract description
+- Use lowercase `<summary>` tag (not `<Summary>`)
+
 ## Open Questions
 
 - [ ] Single tool vs. multi-tool choice in Lecture 1 demo
