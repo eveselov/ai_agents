@@ -20,7 +20,7 @@ def get_openai_client() -> OpenAI:
 def print_tool_call(tool_call: ChatCompletionMessageToolCallUnion):
     """Pretty-print a tool call from the OpenAI response."""
     args = json.loads(tool_call.function.arguments)
-    print(f"  Function tool: {tool_call.function.name} Args: {json.dumps(args, indent=4)}")
+    print(f"  Function: {tool_call.function.name} Args: {json.dumps(args, indent=4)}")
 
 
 def print_messages(title: str, messages: Sequence[ChatCompletionMessage | ChatCompletionMessageParam]):
@@ -34,11 +34,14 @@ def print_messages(title: str, messages: Sequence[ChatCompletionMessage | ChatCo
             tool_calls: ChatCompletionMessageToolCallUnion = m["tool_calls"]
             content = "TOOL calls:"
             for tool_call in tool_calls:
+                tool_id = tool_call.id
                 function = tool_call.function
-                content += f" {function.name} Args: {json.dumps(json.loads(function.arguments), indent=4)}"
+                content += f" Function: {function.name} Args: {json.dumps(json.loads(function.arguments), indent=4)} ---> Tool Call Id: {tool_id}"
         else:
             content = "Unexpected"
         content = str(content)
+        if role == "TOOL":
+            content += f" ---> Tool Call Id: {m['tool_call_id']}"
         if len(content) > 200:
             content = content[:200] + "..."
         print(f"{i}. [{role}] {content}")
