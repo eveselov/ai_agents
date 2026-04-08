@@ -21,12 +21,8 @@ Each lecture answers one layer of that question through running notebook code.
 
 ## Setup
 
-```bash
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-# Fill in your API keys in .env - use .env.example as a template
-```
+See [BUILD.md](BUILD.md) file for exact steps to prepare and run the notebooks.
+You will need to have paid API key from OpenAI and free (or paid) API key from Tavily (see details in [BUILD.md](BUILD.md))
 
 ## Recurring Theme
 
