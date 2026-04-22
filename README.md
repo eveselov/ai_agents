@@ -21,6 +21,14 @@ Each lecture answers one layer of that question through running notebook code.
 
 ## Setup
 
+To work with the course materials in full depth you will have to clone the repository to your local machine and work in Jupyter Notebooks.
+
+A lighter way is to look into each of README.md files to get ideas of what each the lecture presents:
+-  [Minimal Agent Loop](lecture1_minimal_loop/README.md)
+-  [Memory and RAG](lecture2_memory_rag/README.md)
+-  [Graphs and Planning](lecture3_graphs_planning/README.md)
+-  [Multi-Agent Systems](lecture4_multi_agent/README.md)
+
 See [BUILD.md](BUILD.md) file for exact steps to prepare and run the notebooks.
 You will need to have paid API key from OpenAI and free (or paid) API key from Tavily (see details in [BUILD.md](BUILD.md))
 
