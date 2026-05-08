@@ -1,21 +1,25 @@
-# CLAUDE.md — AI Agents Course
+# CLAUDE.md — LLM & AI Agents Lecture Series
 
-This file gives Claude context across multiple short threads. Update it as the course develops.
+This file gives Claude context across multiple short threads. Update it as the series develops.
 
 ## Project Overview
 
-A 4-lecture course on AI agents for a math-enthusiast friends club (~50 people). Mix of engineers and smart non-technical people. Goal: constructive understanding of how agents are built, not how to use them. Each lecture duration is 2 hours. 
+An ongoing lecture series for a math-enthusiast friends club (~50 people). Mix of engineers and smart non-technical people. Each lecture is 2 hours, standalone, and built around a working Jupyter notebook executed live in class.
 
 Working directory: `c:/git/ai-agents/`
 
-## Course Spine
+**The series has two distinct parts — keep them separate in your mind:**
+
+**Part 1 — AI Agents (Lectures 1–4, finished):** A progressive course on building LLM-powered agents from scratch. Has a shared spine and each lecture builds on the previous one.
+
+**Part 2 — LLM Internals & ML Topics (Lectures 5+, ongoing):** Independent standalone lectures on specific ML/LLM topics. These do NOT continue the agents narrative. Each is self-contained. New lectures may be added on any topic (evals, training, architectures, memory mechanisms, etc.).
+
+## Part 1 Spine (Agents)
 
 Single progressive question: *What does it take to get an LLM to reliably accomplish a goal in the real world?*
 
-Recurring theme (establish in L1, echo in each lecture):
+Recurring theme:
 > In classical software, interfaces are enforced by type systems. In agent systems, the interface between components is **natural language** — strings flowing between nodes.
-
-Style: Raschka-style cell-by-cell notebooks, executed live in class. Prefer deliberate breakage to illustrate concepts.
 
 ## Folder Structure
 
@@ -24,42 +28,40 @@ ai-agents/
 ├── CLAUDE.md
 ├── README.md
 ├── requirements.txt
-├── .env.example - a template
-├── .env - a real secret keys - never submit to git
+├── .env.example
+├── .env  (never commit)
 ├── shared/
 │   └── utils.py
 ├── lecture1_minimal_loop/
-│   ├── README.md
-│   └── notebook1.ipynb
 ├── lecture2_memory_rag/
-│   ├── README.md
-│   ├── notebook2.ipynb
-│   └── docs/
 ├── lecture3_graphs_planning/
-│   ├── README.md
-│   └── notebook3.ipynb
-└── lecture4_multi_agent/
-    ├── README.md
-    └── notebook4.ipynb
+├── lecture4_multi_agent/
+└── lecture5_latent_memory/   ← Part 2 begins here; independent of lectures 1–4
 ```
 
 ## Lecture Status
 
-| Lecture | Topic | Status |
-|---------|-------|--------|
-| 1 | Minimal agent loop (raw OpenAI, no frameworks) | finished |
-| 2 | Memory and RAG (Chroma) | scaffolded |
-| 3 | Graphs and planning (LangGraph + Tavily) | scaffolded |
-| 4 | Multi-agent systems (LangGraph orchestrator/worker) | scaffolded |
+| # | Topic | Part | Status |
+|---|-------|------|--------|
+| 1 | Minimal agent loop (raw OpenAI, no frameworks) | Agents | finished |
+| 2 | Memory and RAG (Chroma) | Agents | finished |
+| 3 | Graphs and planning (LangGraph + Tavily) | Agents | finished |
+| 4 | Multi-agent systems (LangGraph orchestrator/worker) | Agents | finished |
+| 5 | Latent Memory Mechanisms in LLM (NTM, Memorizing Transformers) | Internals | in progress |
 
 ## Technical Stack
 
 - Python, Jupyter notebooks
-- OpenAI API (key in .env)
-- Tavily API (key in .env)
-- LangChain, LangGraph
-- Chroma (vector store)
-- SQLite (graph state persistence)
+- PyTorch, matplotlib, numpy (Part 2 lectures)
+- OpenAI API (key in .env) — Part 1 only
+- Tavily API (key in .env) — Part 1 only
+- LangChain, LangGraph — Part 1 only
+- Chroma (vector store) — Part 1 only
+- SQLite (graph state persistence) — Part 1 only
+
+## Lecture Style
+
+Raschka-style cell-by-cell notebooks, executed live in class. Prefer deliberate breakage to illustrate concepts.
 
 ## Design Decisions
 
@@ -88,11 +90,14 @@ Rules for `<details>` blocks:
 
 ## Open Questions
 
+**Part 1 (Agents):**
 - [ ] Single tool vs. multi-tool choice in Lecture 1 demo
-- [ ] Choose RAG document corpus for Lecture 2 (something the audience finds interesting)
+- [ ] Choose RAG document corpus for Lecture 2
 - [ ] Show LangGraph visual graph rendering in Lecture 3?
 - [ ] Include CrewAI in Lecture 4 as contrast to raw LangGraph?
-- [ ] Possible Lecture 5: evals, autonomous agents/safety, or specific application domain
+
+**Part 2 (Internals):**
+- [ ] Lecture 6 topic candidates: Titans/Mamba deep dive, evals, training internals, RLHF
 
 ## Per-Lecture Notes
 
