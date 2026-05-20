@@ -44,7 +44,7 @@ Titans and Mamba are covered conceptually in this lecture; full implementations 
 
 ## What the Notebook Builds
 
-- **Section 0** — The memory paradox (framing diagram)
+- **Section 0** — The memory enigma (framing diagram)
 - **Section 1** — Attention as associative memory (deepening + Hopfield connection)
 - **Section 2** — NTM from scratch: memory matrix, content-based addressing, read, write, graceful degradation demo
 - **Section 3** — Dictionary vs. NTM contrast ("Is that remembering? You decide.")

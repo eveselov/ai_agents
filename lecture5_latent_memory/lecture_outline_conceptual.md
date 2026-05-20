@@ -2,8 +2,26 @@
 ## A Conceptual Reading Guide for Non-Technical Attendees
 
 ---
+## Preface: Memory Timescales
 
-## Section 0: The Memory Paradox — Where Does the Past Live?
+
+## Section 1: Memorization Timescales
+
+Before starting to talk about the **memory** and **memorisation** let's clarify what do we mean by memory?
+Memorization and recalling is needed on several time horizons or timescales:
+
+- Immediate - within the episode: data shared between two parts of a single sillogism, like local variables in functions.
+- Cross-episode - information not available directly in the context window, hence must be represented and stored elsewhere
+    - Weights - encyclopedia-level ppermanent world knowledge (until model re-train).
+    - Context-specific - available now only as RAG, DB, WEB, ...
+        - Domain - specific to particular knowledge area (medicine, physics, aintient history)
+        - Task - specific to a specific task, lasting several weeks, accumulating team or project data
+        - Conversation - hour-long memory needed to participate in a conversation or problem slving
+
+In the previous courses (LLM, Agents) we discussed 
+---
+
+## Section 0: The Memory Enigma — Where Does the Past Live?
 
 Every language model has a window. It reads the text you give it, produces a response, and then — in a fundamental sense — forgets. The next conversation starts fresh. This is not an engineering oversight; it is a deliberate design choice with deep consequences.
 
@@ -13,9 +31,16 @@ The first is in the **frozen weights** — the billions of parameters that were 
 
 The second is in the **context window** — the tokens currently being processed. This is fully faithful and immediately accessible, but strictly bounded. Tokens that fall outside the window simply cease to exist for the model.
 
-The third — and this is what this lecture is about — is in an **external latent memory**: a structure that lives outside the weights but speaks the same mathematical language as the model's internal representations. Not text. Vectors. Floating-point numbers that the model can write to, read from, and be trained to use effectively.
+>> What about RAG or WEB or DB? - an external text memory indexed by embeddings? It looks like the missing **third** source of information. However, it's not the **model's** memory. It's **agent's** memory accessed by python code wrapped arund the model and feeding the information into the its context window on the next iteration of agent's logic. Not the inner model inference logic.
 
-The question this lecture pursues: what does it mean to store a *vector* rather than a *word*? And why does that difference matter?
+>> A human needs uses two mechanisms: - remember in own memory or write text in a blocknote. Writing text on external sheet of paper - is RAG. Remembering inside the brain - is **latent**, diffused with the brain's intelligence, recalled during thinking (inferrence forward pass).
+
+Classic transformers and most of public production LLMs use ony these two innate mechanisms.
+Some of the modern researches go beyond that to implement the real third mechanism - an **external latent memory**: 
+a structure that lives outside the weights but speaks the same mathematical language as the model's internal representations.
+Not text. Vectors. Floating-point numbers that the model can write to, read from, and be trained to use effectively.
+
+The question this lecture pursues: what does it mean to store a *vector* rather than a *word*? how it changes the structure of the transformer? And why does that difference matter?
 
 ---
 
