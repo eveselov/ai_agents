@@ -1,0 +1,10 @@
+cells: 22
+--- cell 0 [markdown] ---
+Traceback (most recent call last):
+  File "c:\git\ai-agents\lecture5_latent_memory\_read_nb5b.py", line 7, in <module>
+    print(src[:1500])
+    ~~~~~^^^^^^^^^^^^
+  File "C:\Users\Eugene\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 98-99: character maps to <undefined>
