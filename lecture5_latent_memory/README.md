@@ -2,11 +2,19 @@
 
 **«Память без слов: как нейронные сети запоминают»**
 
-**Standalone lecture — independent of the AI Agents series (Lectures 1–4).**
+**Standalone mini-series of lectures (5abc) — independent of the AI Agents series (Lectures 1–4).**
 
 Audience: mix of university students, software engineers with math interest, and intelligent non-technical professionals. All have seen RAG, embeddings, and how self-attention works.
 
-Duration: 2 hours.
+Duration of each lecture: 2 hours.
+
+Lectures Plan:
+
+- a) What latent representation is?
+- b) How to build attention to external latent representation?
+- c) How NTM/DNC uses external latent memory
+- d) How Memorizing Transformers use latent memory
+- e) How I am experimenting with ELM experiential latent memory
 
 ---
 
