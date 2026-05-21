@@ -139,7 +139,7 @@ You’re building a system where:
 - memory is **external**
 - memory slots are **trainable**
 - retrieval is **content-based**
-- reasoning is **SSM-driven**
+- reasoning is **QKV-FFN-driven**
 - the transformer is a **decoder of latent plans**
 
 The Hopfield reinterpretation gives you:
